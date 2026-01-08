@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link href="./src/output.css" rel="stylesheet" />
+  </head>
+  <body>
+    <main>
+      <!-- start calculator -->
+      <div
+        class="calculator min-w-screen min-h-screen bg-[#D9D1C2] flex flex-col">
+        <!-- start top -->
+        <div class="top min-h-[calc(40vh)] bg-[#D9D1C2] flex p-5">
+          <div
+            class="display bg-[#202022] min-w-full flex flex-col items-end justify-end gap-0 p-3 rounded-2xl">
+            <p class="input-display text-[5rem] p-0 leading-none text-white">0</p>
+            <p class="result-display text-[3rem] p-0 leading-none text-white">=0</p>
+          </div>
+        </div>
+        <!-- end top -->
+
+        <!-- start bottom -->
+        <div class="bottom min-h-[60vh] bg-[#D9D1C2] p-5 flex">
+          <div class="button-cal min-h-full grid grid-cols-4 gap-2 min-w-full">
+            <!-- row 1 -->
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(1)">1</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(2)">2</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(3)">3</button>
+            <button class="bg-[#6786A0] rounded-3xl text-3xl" onclick="time()">X</button>
+
+            <!-- row 2 -->
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(4)">4</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(5)">5</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(6)">6</button>
+            <button class="bg-[#6786A0] rounded-3xl text-3xl" onclick="divide()">/</button>
+
+            <!-- row 3 -->
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(7)">7</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(8)">8</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" onclick="display_input(9)">9</button>
+            <button class="bg-[#6786A0] rounded-3xl text-3xl" onclick="add()">+</button>
+
+            <!-- row 4 -->
+            <button class="bg-[#8D7D70] rounded-3xl text-3xl">AC</button>
+            <button class="bg-[#E8564C] rounded-3xl text-3xl" >.</button>
+            <button class="bg-[#6786A0] rounded-3xl text-3xl" onclick="equal()">=</button>
+            <button class="bg-[#6786A0] rounded-3xl text-3xl" onabort="min()">-</button>
+          </div>
+        </div>
+        <!-- end bottom -->
+      </div>
+      <!-- end calculator -->
+    </main>
+    <script src="calc.js"></script>
+  </body>
+</html>
